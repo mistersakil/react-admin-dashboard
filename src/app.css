@@ -1,0 +1,45 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --cyan: rgb(0, 255, 255);
+  --yellow: rgb(255, 255, 0);
+  --pink: rgb(255, 0, 255);
+  --red: rgb(255, 0, 0);
+  --green: rgb(0, 255, 0);
+  --blue: rgb(0, 0, 255);
+  --black: rgb(0, 0, 0);
+  --black10: rgb(10, 10, 10);
+  --grey20: rgb(20, 20, 20);
+  --grey50: rgb(50, 50, 50);
+  --grey100: rgb(100, 100, 100);
+  --grey80: rgb(80, 80, 80);
+  --grey: rgb(128, 128, 128);
+  --grey150: rgb(150, 150, 150);
+  --grey200: rgb(200, 200, 200);
+  --grey220: rgb(220 220 220);
+  --grey245: rgb(245 245 245);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: SourceCodePro;
+  src: url("./fonts/SourceCodePro.ttf");
+}
+@font-face {
+  font-family: Oswald;
+  src: url("./fonts/Oswald-Regular.ttf");
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  position: relative;
+  font-family: "Roboto", "Oswald", "SourceCodePro", sans-serif;
+}

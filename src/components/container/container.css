@@ -1,0 +1,21 @@
+/* Variables declared on root app.css file */
+.container {
+  height: calc(100vh - 50px);
+  position: relative;
+}
+.container .row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.container .row .col {
+  flex: 20%;
+  background-color: var(--grey245);
+  padding: 1rem 0 0 1rem;
+}
+
+.container .row .col8 {
+  flex: 80%;
+  background-color: var(--white);
+}
