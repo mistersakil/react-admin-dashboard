@@ -2,6 +2,7 @@ import React from "react";
 import "./container.css";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import Home from "../pages/home/Home";
 const Container = () => {
   return (
     <>
@@ -11,12 +12,11 @@ const Container = () => {
           <div className="col">
             <Sidebar />
           </div>
-          <div className="col col8">right side</div>
+          <div className="col col8">
+            <Home />
+          </div>
         </div>
       </div>
-      {/* <div className="footer">
-        <p className="footerContent">Copyright &copy;</p>
-      </div> */}
     </>
   );
 };

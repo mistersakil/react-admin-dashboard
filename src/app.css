@@ -17,6 +17,7 @@
   --grey200: rgb(200, 200, 200);
   --grey220: rgb(220 220 220);
   --grey245: rgb(245 245 245);
+  --boxShadow: 0px 0px 35px -15px var(--grey);
 }
 * {
   margin: 0;

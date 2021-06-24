@@ -1,0 +1,42 @@
+.featured {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.featuredItem {
+  padding: 4rem 3rem;
+  box-shadow: var(--boxShadow);
+  border-radius: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.featuredContent {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 0;
+}
+.featuredContent > span:first-of-type {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--grey100);
+  margin-right: 2rem;
+}
+.featuredTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--grey100);
+}
+.featuredIcon {
+  margin-left: 0.3rem;
+  color: var(--green);
+  font-size: 2rem !important;
+}
+.featuredIcon.negative {
+  color: var(--red);
+}
+.featuredInfo {
+  color: var(--grey150);
+}

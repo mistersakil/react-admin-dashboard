@@ -47,15 +47,18 @@ const navLinks = [
     ],
   },
 ];
-const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }) => {
+const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }, index) => {
   if (linksInfo.length) {
     return (
-      <div className="sidebarWrapper">
+      <div className="sidebarWrapper" key={index}>
         <h3 className="sidebarTitle">{sidebarTitle}</h3>
         <ul className="sidebarNavLinks">
-          {linksInfo.map(({ title, to, icon }) => {
+          {linksInfo.map(({ title, to, icon }, indexLink) => {
             return (
-              <li>
+              <li
+                key={indexLink}
+                className={index === 0 && indexLink === 0 ? "active" : ""}
+              >
                 {icon}
                 <a href={to}>{title}</a>
               </li>
