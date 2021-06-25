@@ -34,9 +34,9 @@ export default function LineChart() {
       <div className="chartContent">
         <Line
           data={data}
-          height={400}
           options={{
             maintainAspectRatio: false,
+            responsive: true,
             indexAxis: "x",
             scales: {
               y: {

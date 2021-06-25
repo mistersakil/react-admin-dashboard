@@ -1,5 +1,7 @@
 :root {
   --white: rgb(255, 255, 255);
+  --white245: rgb(245, 245, 245);
+  --white220: rgb(220, 220, 220);
   --cyan: rgb(0, 255, 255);
   --yellow: rgb(255, 255, 0);
   --pink: rgb(255, 0, 255);
@@ -15,8 +17,7 @@
   --grey: rgb(128, 128, 128);
   --grey150: rgb(150, 150, 150);
   --grey200: rgb(200, 200, 200);
-  --grey220: rgb(220 220 220);
-  --grey245: rgb(245 245 245);
+  --coffee: rgb(195, 85, 1);
   --boxShadow: 0px 0px 35px -15px var(--grey);
 }
 * {

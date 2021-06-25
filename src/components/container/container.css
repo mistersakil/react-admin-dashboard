@@ -1,6 +1,10 @@
 /* Variables declared on root app.css file */
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
 .container {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   position: relative;
 }
 .container .row {
@@ -10,12 +14,32 @@
 }
 
 .container .row .col {
-  flex: 20%;
+  flex: 1;
   background-color: var(--grey245);
   padding: 1rem 0 0 1rem;
 }
 
-.container .row .col8 {
-  flex: 80%;
+.container .row .col2 {
+  flex: 4;
   background-color: var(--white);
+}
+@media screen and (max-width: 800px) {
+  .container .row .col {
+    flex: 2;
+  }
+  .container .row .col2 {
+    flex: 3;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* .container .row .col {
+    flex: 100%;
+  }
+  .container .row .col2 {
+    flex: 100%;
+  } */
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
 }
