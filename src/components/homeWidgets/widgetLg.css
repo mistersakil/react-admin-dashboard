@@ -1,0 +1,4 @@
+.widgetLg {
+  flex: 3;
+  box-shadow: var(--boxShadow);
+}
