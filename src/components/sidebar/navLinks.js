@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   Home,
   Category,
@@ -17,36 +18,40 @@ const navLinks = [
     sidebarTitle: "Dashboard",
     linksInfo: [
       { title: "Home", to: "/", icon: <Home /> },
-      { title: "Products", to: "/", icon: <LineWeight /> },
-      { title: "Categories", to: "/", icon: <Category /> },
-      { title: "Sales", to: "/", icon: <MonetizationOn /> },
+      { title: "Products", to: "/products", icon: <LineWeight /> },
+      { title: "Categories", to: "/categories", icon: <Category /> },
+      { title: "Sales", to: "/sales", icon: <MonetizationOn /> },
     ],
   },
   {
     sidebarTitle: "Notifications",
     linksInfo: [
-      { title: "Email", to: "/", icon: <MailOutline /> },
-      { title: "Message", to: "/", icon: <ChatBubbleOutline /> },
-      { title: "Feedback", to: "/", icon: <Face /> },
+      { title: "Email", to: "/email", icon: <MailOutline /> },
+      { title: "Message", to: "/message", icon: <ChatBubbleOutline /> },
+      { title: "Feedback", to: "/feedback", icon: <Face /> },
     ],
   },
   {
     sidebarTitle: "Reports",
     linksInfo: [
-      { title: "Sales", to: "/", icon: <MonetizationOn /> },
-      { title: "Profit", to: "/", icon: <AttachMoney /> },
-      { title: "More", to: "/", icon: <More /> },
+      { title: "Sales", to: "/sales-report", icon: <MonetizationOn /> },
+      { title: "Profit", to: "/profit-report", icon: <AttachMoney /> },
+      { title: "More", to: "/more-report", icon: <More /> },
     ],
   },
   {
     sidebarTitle: "Settings",
     linksInfo: [
-      { title: "User", to: "/", icon: <PermIdentity /> },
-      { title: "General", to: "/", icon: <ViewAgenda /> },
-      { title: "Language", to: "/", icon: <Language /> },
+      { title: "User", to: "/users", icon: <PermIdentity /> },
+      { title: "General", to: "/general", icon: <ViewAgenda /> },
+      { title: "Language", to: "/language", icon: <Language /> },
     ],
   },
 ];
+const fireEvent = (event) => {
+  window.scrollTo(0, 0);
+  // console.log(event.target);
+};
 const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }, index) => {
   if (linksInfo.length) {
     return (
@@ -55,12 +60,16 @@ const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }, index) => {
         <ul className="sidebarNavLinks">
           {linksInfo.map(({ title, to, icon }, indexLink) => {
             return (
-              <li
-                key={indexLink}
-                className={index === 0 && indexLink === 0 ? "active" : ""}
-              >
+              <li key={indexLink}>
                 {icon}
-                <a href={to}>{title}</a>
+                <NavLink
+                  onClick={fireEvent}
+                  to={to}
+                  activeClassName="active"
+                  exact
+                >
+                  {title}
+                </NavLink>
               </li>
             );
           })}

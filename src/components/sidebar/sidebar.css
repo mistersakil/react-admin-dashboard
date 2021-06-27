@@ -11,8 +11,9 @@
   align-items: center;
   flex-direction: row;
   margin: 0 1rem 0.3rem 0;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 1rem;
+  transition: all 0.5s linear;
 }
 .sidebarNavLinks > li svg {
   font-size: 2.5rem;
@@ -25,9 +26,11 @@
   font-size: 2rem;
   color: var(--grey100);
   display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
 }
-.sidebarNavLinks > li:hover,
-.sidebarNavLinks > li:active {
+.sidebarNavLinks > li:hover {
   color: var(--black);
   background-color: var(--white);
 }

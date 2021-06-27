@@ -1,10 +1,8 @@
 .chart {
   box-shadow: var(--boxShadow);
   width: 100%;
-
-  /* background-color: cyan; */
   padding: 2rem;
-  margin: 2rem 0;
+  margin-bottom: 1rem;
 }
 .chartContent {
   width: 100%;
@@ -12,5 +10,4 @@
 }
 .chartTitle {
   color: var(--grey50);
-  margin-top: 1rem;
 }

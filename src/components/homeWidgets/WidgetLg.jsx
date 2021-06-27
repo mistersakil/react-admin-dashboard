@@ -1,4 +1,5 @@
 import "./widgetLg.css";
+import { ucFirstFunc } from "../../functions";
 import thumbnail1 from "../../images/sujan2.jpg";
 import thumbnail2 from "../../images/iftakherh.jpg";
 import thumbnail3 from "../../images/sakil.jpg";
@@ -58,7 +59,7 @@ let articlesMapped = articles.map(
 
         <td className="createdAt dNoneXs">{createdAt}</td>
         <td>
-          <span className={"status " + status}> {status}</span>
+          <span className={"status " + status}> {ucFirstFunc(status)}</span>
         </td>
         <td className="dNone">
           <img
