@@ -1,4 +1,81 @@
 .widgetLg {
   flex: 3;
   box-shadow: var(--boxShadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.widgetLgTable thead th {
+  text-align: left;
+}
+.widgetLgTitle {
+  color: var(--grey80);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.widgetLgArticle {
+  font-size: 1.4rem;
+}
+.widgetLgArticle .title a:link,
+.widgetLgArticle .title a:visited {
+  text-decoration: none;
+  color: var(--grey50);
+  transition: all 100ms linear;
+  font-weight: 600;
+}
+.widgetLgArticle .title a:hover,
+.widgetLgArticle .title a:active {
+  color: var(--grey100);
+  outline: 0.1rem solid var(--grey50);
+  outline-offset: 1rem;
+}
+
+.widgetLgArticle .thumbnail {
+  width: 30px;
+  height: 30px;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center 25%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.widgetLgArticle .status {
+  background-color: var(--white220);
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
+  color: var(--blue);
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+.widgetLgArticle .approved {
+  color: var(--green180);
+}
+.widgetLgArticle .declined {
+  color: var(--red);
+}
+
+@media screen and (max-width: 900px) {
+  .dNone {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .widgetLg {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .widgetLgTitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 350px) {
+  .dNoneXs {
+    display: none;
+  }
+  .widgetLgArticle .title a,
+  .widgetLgArticle .title a:link,
+  .widgetLgArticle .title a:visited {
+    outline: none;
+    font-weight: 400;
+  }
 }

@@ -6,11 +6,6 @@ export default function WidgetSm() {
     <section className="widgetSm">
       <h3 className="widgetSmTitle">New Registered Users</h3>
       <WidgetSmItem />
-      <WidgetSmItem />
-      <WidgetSmItem />
-      <WidgetSmItem />
-      <WidgetSmItem />
-      <WidgetSmItem />
     </section>
   );
 }

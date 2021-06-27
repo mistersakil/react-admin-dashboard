@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
-import avatar from "../../images/avatar.jpg";
+import avatar from "../../images/sujan.jpg";
 
 const Header = () => {
   return (
