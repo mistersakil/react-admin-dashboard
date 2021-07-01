@@ -1,0 +1,19 @@
+.users {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--boxShadow);
+  padding: 2rem;
+}
+.users .pageTitle {
+  color: var(--grey80);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.users .avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}

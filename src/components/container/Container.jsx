@@ -17,8 +17,6 @@ const Container = () => {
               <Sidebar />
             </div>
             <div className="col col2 ">
-              {/* <Home />
-              <Users /> */}
               <Switch>
                 <Route path="/users" exact>
                   <Users />
