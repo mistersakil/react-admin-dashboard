@@ -4,16 +4,33 @@
   flex-direction: column;
   box-shadow: var(--boxShadow);
   padding: 2rem;
-}
-.users .pageTitle {
-  color: var(--grey80);
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
 }
+.users .MuiDataGrid-root * {
+  font-size: 1.4rem;
+}
+
 .users .avatar {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.users .editLink,
+.users .deleteLink {
+  background-color: var(--white220);
+  margin-left: 0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.users .editLink {
+  color: var(--blue);
+}
+.users .deleteLink {
+  color: var(--red);
 }

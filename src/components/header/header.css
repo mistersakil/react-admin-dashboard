@@ -3,7 +3,7 @@
 header {
   height: 5rem;
   width: 100%;
-  background-color: var(--grey200);
+  background: var(--greyLightGradient);
   position: sticky;
   top: 0;
   z-index: 999;

@@ -1,0 +1,41 @@
+/* Pagination css */
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--greyGradient);
+  color: var(--white);
+}
+.breadcrumb .pageTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.breadcrumbLinksContainer {
+  display: flex;
+}
+.breadcrumbLinksItem {
+  list-style: none;
+}
+.breadcrumbLinksLink {
+  text-decoration: none;
+  color: var(--white220);
+  padding: 0 1.5rem;
+  position: relative;
+}
+.breadcrumbLinksLink::after {
+  content: "";
+  position: absolute;
+  border: 7px solid red;
+  right: -12px;
+  bottom: 2px;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+.breadcrumbLinksItem:last-child .breadcrumbLinksLink:after {
+  content: "";
+  position: absolute;
+  border: none;
+}
+/* End:Pagination css */

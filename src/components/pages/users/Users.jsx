@@ -2,23 +2,41 @@ import "./users.css";
 import { useEffect } from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import img from "../../../images/sakil.jpg";
-import { FiberManualRecord } from "@material-ui/icons";
-export default function Users() {
+import { FiberManualRecord, Edit, DeleteForever } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import Layout from "../Layout";
+export default function Users(props) {
   useEffect(() => {
     document.title = `Users - ${process.env.REACT_APP_BRAND}`;
   }, []);
   const columns = [
-    { field: "id", headerName: "ID", width: 100 },
-    { field: "firstName", headerName: "First name", width: 150 },
-    { field: "lastName", headerName: "Last name", width: 150 },
+    { field: "id", headerName: "ID", width: 80 },
+    { field: "firstName", headerName: "First name", width: 140 },
+    { field: "lastName", headerName: "First name", width: 140 },
     { field: "username", headerName: "Username", width: 150 },
-    { field: "email", headerName: "Email", width: 150 },
+    { field: "email", headerName: "Email", width: 200 },
+    {
+      field: "avatar",
+      headerName: "Avatar",
+      width: 110,
+      renderCell: (fields) => {
+        return (
+          <>
+            <img
+              src={fields.row.avatar}
+              alt={fields.row.username}
+              className="avatar"
+            />
+          </>
+        );
+      },
+    },
     {
       field: "status",
-      headerName: "Status",
-      width: 100,
+      headerName: "Actions",
+      width: 150,
       renderCell: (fields) => {
-        const { status } = fields.row;
+        const { status, id } = fields.row;
         return (
           <>
             {status === "active" ? (
@@ -34,22 +52,16 @@ export default function Users() {
                 <FiberManualRecord style={{ color: "var(--orange)" }} />
               </span>
             )}
-          </>
-        );
-      },
-    },
-    {
-      field: "others",
-      headerName: "Avatar",
-      width: 100,
-      renderCell: (fields) => {
-        return (
-          <>
-            <img
-              src={fields.row.avatar}
-              alt={fields.row.username}
-              className="avatar"
-            />
+            <span className="edit" title="Edit">
+              <Link to={`/users/edit/${id}`} className="editLink">
+                <Edit />
+              </Link>
+            </span>
+            <span className="delete" title="Delete">
+              <Link to={`/users/delete/${id}`} className="deleteLink">
+                <DeleteForever />
+              </Link>
+            </span>
           </>
         );
       },
@@ -111,18 +123,66 @@ export default function Users() {
       status: "pending",
       avatar: img,
     },
+    {
+      id: 7,
+      firstName: "Babu",
+      lastName: "Jomadder",
+      username: "babujomadder",
+      email: "babujomadder@mail.com",
+      status: "inactive",
+      avatar: img,
+    },
+    {
+      id: 8,
+      firstName: "Liza",
+      lastName: "Jomadder",
+      username: "lizajomadder",
+      email: "lizajomadder@mail.com",
+      status: "active",
+      avatar: img,
+    },
+    {
+      id: 9,
+      firstName: "Alamgir",
+      lastName: "Jomadder",
+      username: "alamgirjomadder",
+      email: "alamgirjomadder@mail.com",
+      status: "inactive",
+      avatar: img,
+    },
+    {
+      id: 10,
+      firstName: "Emraj",
+      lastName: "Jomadder",
+      username: "emrajjomadder",
+      email: "emrajjomadder@mail.com",
+      status: "pending",
+      avatar: img,
+    },
+    {
+      id: 11,
+      firstName: "Moon",
+      lastName: "Jomadder",
+      username: "moonjjomadder",
+      email: "moonjomadder@mail.com",
+      status: "active",
+      avatar: img,
+    },
   ];
+  // const { hasBreadcrumb, pageTitle } = props;
+
   return (
-    <section className="users">
-      <h3 className="pageTitle">User List</h3>
-      <div style={{ height: 400, width: "100%" }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={5}
-          checkboxSelection
-        />
-      </div>
-    </section>
+    <Layout {...props}>
+      <section className="users">
+        <div style={{ height: "85vh", width: "100%" }}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={7}
+            checkboxSelection
+          />
+        </div>
+      </section>
+    </Layout>
   );
 }

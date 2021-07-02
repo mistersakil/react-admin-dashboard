@@ -21,6 +21,8 @@
   --grey150: rgb(150, 150, 150);
   --grey200: rgb(200, 200, 200);
   --boxShadow: 0px 0px 35px -15px var(--grey);
+  --greyGradient: linear-gradient(to bottom, var(--grey150), var(--grey50));
+  --greyLightGradient: linear-gradient(to top, var(--white220), var(--grey100));
 }
 * {
   margin: 0;

@@ -19,7 +19,7 @@ const Container = () => {
             <div className="col col2 ">
               <Switch>
                 <Route path="/users" exact>
-                  <Users />
+                  <Users hasBreadcrumb={true} pageTitle="users" />
                 </Route>
                 <Route path="/" exact>
                   <Home />
