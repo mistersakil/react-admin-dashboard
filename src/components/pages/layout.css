@@ -1,4 +1,4 @@
-/* Pagination css */
+/* Breadcrumb css */
 .layout {
   display: flex;
   flex-direction: column;
@@ -38,18 +38,19 @@
 .breadcrumbLinksLink::after {
   content: "";
   position: absolute;
-  border: 0.7rem solid var(--cyan);
-  right: -12px;
-  bottom: 2px;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
+  width: 0.3rem;
+  height: 1.8rem;
+  right: 0px;
+  bottom: 0px;
+  background: var(--cyan);
+  transform: rotate(15deg);
 }
 .breadcrumbLinksItem:last-child .breadcrumbLinksLink:after {
   content: "";
-  border: none;
+  height: 0;
+  width: 0;
 }
 .hideContent {
   visibility: hidden;
 }
-/* End:Pagination css */
+/* End:Breadcrumb css */

@@ -12,6 +12,7 @@ export default function Layout(props) {
       pageTitle === "home" ? "dashboard" : navLinks[pageTitle].title
     )} - ${process.env.REACT_APP_BRAND}`;
   });
+
   return (
     <main className="layout">
       {hasBreadcrumb && (
@@ -30,18 +31,19 @@ export default function Layout(props) {
                 {navLinks.home.title}
               </Link>
             </li>
-            {/* {navLinks[pageTitle].path.map((item) => {
+            {navLinks[pageTitle].path.map((item, index) => {
               return (
-                <li className="breadcrumbLinksItem">
+                <li className="breadcrumbLinksItem" key={index}>
                   <Link
-                    to={navLinks[pageTitle].path.link}
+                    to={item.link}
                     className="breadcrumbLinksLink"
+                    title={item.name}
                   >
-                    {navLinks[pageTitle].path.name}
+                    {item.name}
                   </Link>
                 </li>
               );
-            })} */}
+            })}
           </ul>
         </section>
       )}
