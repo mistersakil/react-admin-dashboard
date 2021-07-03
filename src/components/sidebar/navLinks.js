@@ -50,7 +50,6 @@ const navLinks = [
 ];
 const fireEvent = (event) => {
   window.scrollTo(0, 0);
-  // console.log(event.target);
 };
 const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }, index) => {
   if (linksInfo.length) {
@@ -77,6 +76,6 @@ const navLinksMapped = navLinks.map(({ sidebarTitle, linksInfo }, index) => {
       </div>
     );
   }
-  return;
+  return true;
 });
 export default navLinksMapped;

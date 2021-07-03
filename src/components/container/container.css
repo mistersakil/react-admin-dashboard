@@ -15,7 +15,6 @@
 .container .row .col {
   flex: 1;
   background-color: var(--white220);
-  padding: 1rem 0 0 1rem;
 }
 
 .container .row .col2 {

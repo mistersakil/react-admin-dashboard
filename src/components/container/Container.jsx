@@ -6,6 +6,7 @@ import Sidebar from "../sidebar/Sidebar";
 import Footer from "../footer/Footer";
 import Home from "../pages/home/Home";
 import Users from "../pages/users/Users";
+import UserCreate from "../pages/users/UserCreate";
 const Container = () => {
   return (
     <>
@@ -19,10 +20,13 @@ const Container = () => {
             <div className="col col2 ">
               <Switch>
                 <Route path="/users" exact>
-                  <Users hasBreadcrumb={true} pageTitle="users" />
+                  <Users pageTitle="users" hasBreadcrumb={true} />
+                </Route>
+                <Route path="/users/create" exact>
+                  <UserCreate pageTitle="userCreate" hasBreadcrumb={true} />
                 </Route>
                 <Route path="/" exact>
-                  <Home />
+                  <Home pageTitle="home" />
                 </Route>
               </Switch>
             </div>

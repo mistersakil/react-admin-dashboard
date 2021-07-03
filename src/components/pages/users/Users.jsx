@@ -10,15 +10,15 @@ export default function Users(props) {
     document.title = `Users - ${process.env.REACT_APP_BRAND}`;
   }, []);
   const columns = [
-    { field: "id", headerName: "ID", width: 80 },
-    { field: "firstName", headerName: "First name", width: 140 },
-    { field: "lastName", headerName: "First name", width: 140 },
-    { field: "username", headerName: "Username", width: 150 },
-    { field: "email", headerName: "Email", width: 200 },
+    { field: "id", headerName: "ID", flex: 0.6 },
+    { field: "firstName", headerName: "First name", flex: 1 },
+    { field: "lastName", headerName: "Last name", flex: 1 },
+    { field: "username", headerName: "Username", flex: 1 },
+    { field: "email", headerName: "Email", flex: 1.4 },
     {
       field: "avatar",
       headerName: "Avatar",
-      width: 110,
+
       renderCell: (fields) => {
         return (
           <>
@@ -30,6 +30,7 @@ export default function Users(props) {
           </>
         );
       },
+      flex: 0.8,
     },
     {
       field: "status",
@@ -65,6 +66,7 @@ export default function Users(props) {
           </>
         );
       },
+      flex: 0.8,
     },
   ];
 
