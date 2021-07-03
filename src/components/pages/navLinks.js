@@ -9,7 +9,7 @@ const navLinks = {
     title: "Add New User",
     path: [
       { name: "Users", link: "/users" },
-      { name: "Add New", link: "/users/create" },
+      { name: "Add New User", link: "/users/create" },
     ],
     create: "/users/create",
   },

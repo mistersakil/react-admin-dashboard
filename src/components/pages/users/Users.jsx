@@ -1,14 +1,20 @@
 import "./users.css";
-import { useEffect } from "react";
+import { useState } from "react";
 import { DataGrid } from "@material-ui/data-grid";
-import img from "../../../images/sakil.jpg";
+import { dummyUserRows } from "../../../dummyData";
 import { FiberManualRecord, Edit, DeleteForever } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Layout from "../Layout";
+
 export default function Users(props) {
-  useEffect(() => {
-    document.title = `Users - ${process.env.REACT_APP_BRAND}`;
-  }, []);
+  const [userList, userListSet] = useState(dummyUserRows);
+  const handleDelete = (id) => {
+    console.log(id);
+    userListSet((users) => {
+      return userList.filter((user) => user.id !== parseInt(id));
+    });
+  };
+
   const columns = [
     { field: "id", headerName: "ID", flex: 0.6 },
     { field: "firstName", headerName: "First name", flex: 1 },
@@ -19,13 +25,14 @@ export default function Users(props) {
       field: "avatar",
       headerName: "Avatar",
 
-      renderCell: (fields) => {
+      renderCell: (params) => {
         return (
           <>
             <img
-              src={fields.row.avatar}
-              alt={fields.row.username}
+              src={params.row.avatar}
+              alt={params.row.username}
               className="avatar"
+              onClick={() => handleDelete(params.row.id)}
             />
           </>
         );
@@ -36,8 +43,8 @@ export default function Users(props) {
       field: "status",
       headerName: "Actions",
       width: 150,
-      renderCell: (fields) => {
-        const { status, id } = fields.row;
+      renderCell: (params) => {
+        const { status, id } = params.row;
         return (
           <>
             {status === "active" ? (
@@ -59,9 +66,14 @@ export default function Users(props) {
               </Link>
             </span>
             <span className="delete" title="Delete">
-              <Link to={`/users/delete/${id}`} className="deleteLink">
+              <span
+                className="deleteLink"
+                onClick={() => {
+                  handleDelete(id);
+                }}
+              >
                 <DeleteForever />
-              </Link>
+              </span>
             </span>
           </>
         );
@@ -70,118 +82,17 @@ export default function Users(props) {
     },
   ];
 
-  const rows = [
-    {
-      id: 1,
-      firstName: "Sakil ",
-      lastName: "Jomadder",
-      username: "sakiljomadder",
-      email: "sakiljomadder@mail.com",
-      status: "active",
-      avatar: img,
-    },
-    {
-      id: 2,
-      firstName: "Rasel",
-      lastName: "Jomadder",
-      username: "raseljomadder",
-      email: "raseljomadder@mail.com",
-      status: "inactive",
-      avatar: img,
-    },
-    {
-      id: 3,
-      firstName: "Monir",
-      lastName: "Jomadder",
-      username: "monirjomadder",
-      email: "monirjomadder@mail.com",
-      status: "pending",
-      avatar: img,
-    },
-    {
-      id: 4,
-      firstName: "Jolil",
-      lastName: "Jomadder",
-      username: "joliljomadder",
-      email: "joliljomadder@mail.com",
-      status: "active",
-      avatar: img,
-    },
-    {
-      id: 5,
-      firstName: "Kobir",
-      lastName: "Jomaddder",
-      username: "kobirjomadder",
-      email: "kobirjomadder@mail.com",
-      status: "pending",
-      avatar: img,
-    },
-    {
-      id: 6,
-      firstName: "Jahangir",
-      lastName: "Jomadder",
-      username: "jahangirjomadder",
-      email: "jahangirjomadder@mail.com",
-      status: "pending",
-      avatar: img,
-    },
-    {
-      id: 7,
-      firstName: "Babu",
-      lastName: "Jomadder",
-      username: "babujomadder",
-      email: "babujomadder@mail.com",
-      status: "inactive",
-      avatar: img,
-    },
-    {
-      id: 8,
-      firstName: "Liza",
-      lastName: "Jomadder",
-      username: "lizajomadder",
-      email: "lizajomadder@mail.com",
-      status: "active",
-      avatar: img,
-    },
-    {
-      id: 9,
-      firstName: "Alamgir",
-      lastName: "Jomadder",
-      username: "alamgirjomadder",
-      email: "alamgirjomadder@mail.com",
-      status: "inactive",
-      avatar: img,
-    },
-    {
-      id: 10,
-      firstName: "Emraj",
-      lastName: "Jomadder",
-      username: "emrajjomadder",
-      email: "emrajjomadder@mail.com",
-      status: "pending",
-      avatar: img,
-    },
-    {
-      id: 11,
-      firstName: "Moon",
-      lastName: "Jomadder",
-      username: "moonjjomadder",
-      email: "moonjomadder@mail.com",
-      status: "active",
-      avatar: img,
-    },
-  ];
-  // const { hasBreadcrumb, pageTitle } = props;
-
   return (
     <Layout {...props}>
+      {console.log(userList)}
       <section className="users">
         <div style={{ height: "85vh", width: "100%" }}>
           <DataGrid
-            rows={rows}
+            rows={userList}
             columns={columns}
             pageSize={7}
             checkboxSelection
+            disableSelectionOnClick
           />
         </div>
       </section>

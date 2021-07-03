@@ -33,4 +33,5 @@
 }
 .users .deleteLink {
   color: var(--red);
+  cursor: pointer;
 }

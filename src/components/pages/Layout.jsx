@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./layout.css";
 import { Link } from "react-router-dom";
 import { ucFirstFunc } from "../../functions";
-import navLinks from "../../navLinks";
+import navLinks from "./navLinks";
 import { AddCircle } from "@material-ui/icons";
 export default function Layout(props) {
   let { children, hasBreadcrumb, pageTitle } = props;
