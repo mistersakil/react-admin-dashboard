@@ -8,6 +8,8 @@ export const dummyUserRows = [
     email: "sakiljomadder@mail.com",
     status: "active",
     avatar: img,
+    mobileNo: "+8801720092787",
+    designation: "Software Engineer",
   },
   {
     id: 2,
@@ -17,6 +19,8 @@ export const dummyUserRows = [
     email: "raseljomadder@mail.com",
     status: "inactive",
     avatar: img,
+    mobileNo: "+8801720092789",
+    designation: "Ruby Engineer",
   },
   {
     id: 3,
@@ -26,6 +30,8 @@ export const dummyUserRows = [
     email: "monirjomadder@mail.com",
     status: "pending",
     avatar: img,
+    mobileNo: "+8801720092781",
+    designation: "Angular Engineer",
   },
   {
     id: 4,
@@ -35,6 +41,8 @@ export const dummyUserRows = [
     email: "joliljomadder@mail.com",
     status: "active",
     avatar: img,
+    mobileNo: "+8801720092782",
+    designation: "React Engineer",
   },
   {
     id: 5,
@@ -44,6 +52,8 @@ export const dummyUserRows = [
     email: "kobirjomadder@mail.com",
     status: "pending",
     avatar: img,
+    mobileNo: "+8801720092783",
+    designation: "Javascript Engineer",
   },
   {
     id: 6,
@@ -53,6 +63,8 @@ export const dummyUserRows = [
     email: "jahangirjomadder@mail.com",
     status: "pending",
     avatar: img,
+    mobileNo: "+8801720092784",
+    designation: "Dino Engineer",
   },
   {
     id: 7,
@@ -62,6 +74,8 @@ export const dummyUserRows = [
     email: "babujomadder@mail.com",
     status: "inactive",
     avatar: img,
+    mobileNo: "+8801720092785",
+    designation: "Java Engineer",
   },
   {
     id: 8,
@@ -71,6 +85,8 @@ export const dummyUserRows = [
     email: "lizajomadder@mail.com",
     status: "active",
     avatar: img,
+    mobileNo: "+8801720092786",
+    designation: "Python Engineer",
   },
   {
     id: 9,
@@ -80,6 +96,8 @@ export const dummyUserRows = [
     email: "alamgirjomadder@mail.com",
     status: "inactive",
     avatar: img,
+    mobileNo: "+8801720092788",
+    designation: "React.js Engineer",
   },
   {
     id: 10,
@@ -89,6 +107,8 @@ export const dummyUserRows = [
     email: "emrajjomadder@mail.com",
     status: "pending",
     avatar: img,
+    mobileNo: "+8801720092780",
+    designation: "Node.js Engineer",
   },
   {
     id: 11,
@@ -98,5 +118,7 @@ export const dummyUserRows = [
     email: "moonjomadder@mail.com",
     status: "active",
     avatar: img,
+    mobileNo: "+8801720092787",
+    designation: "PHP Engineer",
   },
 ];

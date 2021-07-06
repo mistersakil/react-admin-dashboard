@@ -50,3 +50,20 @@ body {
   position: relative;
   font-family: "Roboto", "Oswald", "SourceCodePro", sans-serif;
 }
+a,
+a:link {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.title3 {
+  color: var(--grey100);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.title5 {
+  color: var(--grey100);
+  font-size: 1.6rem;
+  font-weight: 500;
+}

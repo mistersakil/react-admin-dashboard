@@ -7,6 +7,7 @@ import Footer from "../footer/Footer";
 import Home from "../pages/home/Home";
 import Users from "../pages/users/Users";
 import UserCreate from "../pages/users/UserCreate";
+import UserUpdate from "../pages/users/UserUpdate";
 const Container = () => {
   return (
     <>
@@ -24,6 +25,9 @@ const Container = () => {
                 </Route>
                 <Route path="/users/create" exact>
                   <UserCreate pageTitle="userCreate" hasBreadcrumb={true} />
+                </Route>
+                <Route path="/users/edit/:id" exact>
+                  <UserUpdate pageTitle="userUpdate" hasBreadcrumb={true} />
                 </Route>
                 <Route path="/" exact>
                   <Home pageTitle="home" />

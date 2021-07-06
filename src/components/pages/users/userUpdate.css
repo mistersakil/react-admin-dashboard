@@ -1,0 +1,57 @@
+.userUpdate {
+  display: flex;
+}
+.userInfoContainer {
+  flex: 1;
+  box-shadow: var(--boxShadow);
+  margin-right: 2rem;
+  padding: 1rem;
+}
+.userAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userInfoHeader {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+.userTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+  font-size: 1.6rem;
+}
+.userTitle .name {
+  font-weight: 600;
+}
+.userTitle .designation {
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.userInfoFooter {
+  display: flex;
+  flex-direction: column;
+}
+.userInfoFooter p {
+  display: flex;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+.userInfoFooter p.username {
+  margin-top: 3rem;
+}
+.userInfoFooter p > .userInfoIcon {
+  margin-right: 1rem;
+  font-size: 2.2rem;
+  color: var(--grey100);
+}
+/* User Update Container Section */
+
+.userUpdateContainer {
+  flex: 2;
+  box-shadow: var(--boxShadow);
+}

@@ -84,8 +84,8 @@ export default function Users(props) {
 
   return (
     <Layout {...props}>
-      {console.log(userList)}
       <section className="users">
+        <h3 className="usersTitle">User list</h3>
         <div style={{ height: "85vh", width: "100%" }}>
           <DataGrid
             rows={userList}

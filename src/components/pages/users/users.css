@@ -9,6 +9,13 @@
 .users .MuiDataGrid-root * {
   font-size: 1.4rem;
 }
+.usersTitle {
+  margin-left: 0.5rem;
+  color: var(--grey100);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem;
+}
 
 .users .avatar {
   width: 4rem;
