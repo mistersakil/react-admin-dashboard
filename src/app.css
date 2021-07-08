@@ -67,3 +67,18 @@ li {
   font-size: 1.6rem;
   font-weight: 500;
 }
+.btn {
+  outline: none;
+  border: none;
+  background: var(--grey20);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white);
+  padding: 2rem 5rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.btn:hover {
+  background: var(--grey150);
+  color: var(--black10);
+}

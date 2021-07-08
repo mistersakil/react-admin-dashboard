@@ -60,4 +60,28 @@
 .hidden {
   visibility: hidden;
 }
+/* Media Query */
+@media screen and (max-width: 650px) {
+  .breadcrumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .breadcrumbLinksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+  .breadcrumbLinksLink {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .breadcrumbLinksLink::after {
+    content: "";
+    display: none;
+  }
+}
+
 /* End:Breadcrumb css */

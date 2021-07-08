@@ -2,22 +2,24 @@ import "./userUpdate.css";
 import Layout from "../Layout";
 import { useParams } from "react-router-dom";
 import img from "../../../images/iftakherh.jpg";
+import { dummyUserRows } from "../../../dummyData";
+import UserUpdateItem from "./UserUpdateItem";
 import {
   PermIdentity,
-  Schedule,
+  Publish,
   PhoneIphone,
   MailOutline,
   Room,
   CalendarToday,
 } from "@material-ui/icons";
-import { dummyUserRows } from "../../../dummyData";
+
 function UserUpdate(props) {
   const urlParams = useParams();
-  console.log(urlParams.id);
+
   const user = dummyUserRows.filter(
     (user) => user.id === parseInt(urlParams.id)
   )[0];
-  console.log(user);
+
   return (
     <Layout {...props}>
       <section className="userUpdate">
@@ -57,7 +59,48 @@ function UserUpdate(props) {
             </div>
           </div>
         )}
-        <div className="userUpdateContainer"></div>
+        <div className="userUpdateContainer">
+          <h3 className="userUpdateTitle title3">Edit User Information</h3>
+          <div className="userUpdateContent">
+            <div className="userUpdateLeft">
+              <form className="userUpdateForm">
+                <UserUpdateItem label="First Name" value={user.firstName} />
+                <UserUpdateItem label="Last Name" value={user.lastName} />
+                <UserUpdateItem label="Username" value={user.username} />
+                <UserUpdateItem label="Email" value={user.email} />
+                <UserUpdateItem label="Mobile" value={user.mobileNo} />
+                <UserUpdateItem label="Designation" value={user.designation} />
+                <UserUpdateItem
+                  type="textarea"
+                  label="Address"
+                  value={user.address}
+                />
+              </form>
+            </div>
+            <div className="userUpdateRight">
+              <div className="userUpdateFileUpload">
+                <img
+                  src={user.avatar}
+                  alt="avatar"
+                  className="userUpdateAvatar"
+                />
+                <label
+                  htmlFor="userUpdateAvatar"
+                  title="Upload Profile Picture"
+                >
+                  <Publish className="icon" />
+                </label>
+                <input
+                  type="file"
+                  className="userUpdateAvatar"
+                  id="userUpdateAvatar"
+                  style={{ display: "none" }}
+                />
+              </div>
+              <button className="userUpdateBtn">Update</button>
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   );

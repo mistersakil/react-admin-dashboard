@@ -24,9 +24,11 @@
 @media screen and (max-width: 800px) {
   .container .row .col {
     flex: 2;
+    width: 100%;
   }
   .container .row .col2 {
     flex: 3;
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
