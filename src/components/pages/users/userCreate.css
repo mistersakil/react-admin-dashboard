@@ -1,3 +1,7 @@
+.userCreate {
+  box-shadow: var(--boxShadow);
+  padding: 1rem;
+}
 .userCreateForm {
   margin-top: 2.5rem;
 }
@@ -85,3 +89,5 @@
   height: 15rem;
   border-radius: 1rem;
 }
+
+/* Media Query */
