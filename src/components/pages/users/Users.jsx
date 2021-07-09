@@ -86,7 +86,7 @@ export default function Users(props) {
     <Layout {...props}>
       <section className="users">
         <h3 className="usersTitle">User list</h3>
-        {/* <div style={{ height: "85vh", width: "100%" }}>
+        <div style={{ height: "85vh", width: "100%" }}>
           <DataGrid
             rows={userList}
             columns={columns}
@@ -94,7 +94,7 @@ export default function Users(props) {
             checkboxSelection
             disableSelectionOnClick
           />
-        </div> */}
+        </div>
       </section>
     </Layout>
   );

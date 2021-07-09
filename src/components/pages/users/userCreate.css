@@ -90,4 +90,40 @@
   border-radius: 1rem;
 }
 
-/* Media Query */
+/* Media Query 800px */
+@media screen and (max-width: 800px) {
+  .formItemContainer {
+    flex-direction: column;
+  }
+  .formItem {
+    max-width: 100%;
+  }
+  .formItem:nth-child(2n) {
+    margin-left: 0;
+  }
+  .formItem .formItemRadio {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .fileUpload {
+    flex-direction: column;
+  }
+  .fileUpload .icon {
+    margin: 1rem 0;
+  }
+}
+/* Media Query 300px */
+@media screen and (max-width: 300px) {
+  .formItem .formItemRadio {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .formItem .formItemRadio .item {
+    margin: 1rem 0 1rem 0;
+  }
+  .formFile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
