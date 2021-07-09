@@ -3,8 +3,7 @@
   "description": "React Admin Dashboard Is Testing Application",
   "version": "0.1.0",
   "engines": {
-    "node": "12.18.2",
-    "npm": "7.6.3"
+    "node": "12.18.2"    
   },
   "private": true,
   "dependencies": {
@@ -28,7 +27,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "heroku-postbuild": "ng build --prod",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
