@@ -2,6 +2,9 @@ import "./userCreate.css";
 import Layout from "../Layout";
 import CreateTextbox from "./CreateTextbox";
 import CreateSelectBox from "./CreateSelectBox";
+import CreateRadioBox from "./CreateRadioBox";
+import avatar from "../../../images/avatar.png";
+import { Publish } from "@material-ui/icons";
 export default function UserCreate(props) {
   return (
     <Layout {...props}>
@@ -16,19 +19,7 @@ export default function UserCreate(props) {
             <CreateTextbox name="Password" type="password" />
             <CreateTextbox name="Mobile" />
             <CreateTextbox name="Address" />
-            <div className="formItem">
-              <label className="formItemLabel">Gender</label>
-              <article className="formItemRadio">
-                <label className="item" htmlFor={`male`}>
-                  <input type="radio" name="gender" id="male" />
-                  {`male`}
-                </label>
-                <label className="item" htmlFor={`female`}>
-                  <input type="radio" name="gender" id="female" />
-                  {`female`}
-                </label>
-              </article>
-            </div>
+            <CreateRadioBox />
             <CreateSelectBox
               name="User Role"
               values={["Administrator", "Editor", "Author", "User"]}
@@ -45,9 +36,23 @@ export default function UserCreate(props) {
             />
           </aside>
           <aside className="formFile">
-            <button type="submit" className="btn">
-              Save
-            </button>
+            <div className="fileUpload">
+              <img src={avatar} alt="userAvatarUpload" className="avatar" />
+              <label htmlFor="uploadAvatar" title="Upload User Profile Picture">
+                <Publish className="icon" />
+              </label>
+              <input
+                type="file"
+                name="uploadAvatar"
+                id="uploadAvatar"
+                style={{ display: "none" }}
+              />
+            </div>
+            <div className="createBtn">
+              <button type="submit" className="btn">
+                Save
+              </button>
+            </div>
           </aside>
         </form>
       </section>

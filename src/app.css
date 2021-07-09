@@ -79,6 +79,8 @@ li {
   transition: all 300ms ease;
 }
 .btn:hover {
-  background: var(--grey150);
+  background: var(--white220);
   color: var(--black10);
+  box-shadow: 5px -5px 5px 5px var(--black10);
+  transform: skewX(-10deg);
 }
