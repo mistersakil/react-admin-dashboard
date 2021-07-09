@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: var(--boxShadow);
-
   font-size: 2rem;
 }
 .users .MuiDataGrid-root * {
