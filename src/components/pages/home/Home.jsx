@@ -8,7 +8,7 @@ export default function Home(props) {
     <Layout {...props}>
       <div className="homeContainer">
         <Featured />
-        {/* <LineChart /> */}
+        <LineChart />
         <HomeWidgets />
       </div>
     </Layout>
